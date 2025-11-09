@@ -505,26 +505,26 @@
             
             <!-- Orbiting Galileo Satellite -->
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg flex items-center justify-center satellite-orbit" style="animation-delay: -4s; animation-duration: 10s;">
+                <div class="w-10 h-10 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg flex items-center justify-center satellite-orbit" style="animation-delay: -4s; animation-duration: 10s; box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 4px 8px rgba(0,0,0,0.2);">
                     <i class="fas fa-satellite-dish text-white"></i>
                 </div>
             </div>
             
             <!-- Light Emission Rings -->
-            <div class="absolute inset-0 w-40 h-40 -m-4 border-2 border-green-400 rounded-full opacity-20 light-pulse"></div>
-            <div class="absolute inset-0 w-48 h-48 -m-8 border border-blue-400 rounded-full opacity-10 light-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute inset-0 w-40 h-40 -m-4 border-2 border-green-400 rounded-full opacity-20 light-pulse" style="opacity: 0.5; border-color: #10b981; border-width: 3px;"></div>
+            <div class="absolute inset-0 w-48 h-48 -m-8 border border-blue-400 rounded-full opacity-10 light-pulse" style="animation-delay: 1s; opacity: 0.4; border-color: #3b82f6; border-width: 2px;"></div>
         </div>
         
-        <h1 class="text-5xl md:text-6xl font-black text-center mb-6 bg-gradient-to-r from-green-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-pulse">
+        <h1 class="text-5xl md:text-6xl font-black text-center mb-6 bg-gradient-to-r from-green-400 via-blue-500 to-green-400 bg-clip-text text-transparent animate-pulse" style="text-shadow: 0 0 30px rgba(34, 197, 94, 0.3);">
             EcoRover
         </h1>
-        <p class="text-xl md:text-2xl text-center text-gray-300 mb-3 fade-in">Navigate Safely. Journey Sustainably.</p>
-        <p class="text-lg md:text-xl text-center neon-green font-bold pulse-green">✨ Power from Space ✨</p>
+        <p class="text-xl md:text-2xl text-center text-gray-300 mb-3 fade-in" style="color: #374151; font-weight: 600; text-shadow: 0 1px 2px rgba(0,0,0,0.1);">Navigate Safely. Journey Sustainably.</p>
+        <p class="text-lg md:text-xl text-center neon-green font-bold pulse-green" style="color: #059669; font-size: 1.5rem; text-shadow: 0 0 20px rgba(5, 150, 105, 0.5), 0 2px 4px rgba(0,0,0,0.1);">✨ Power from Space ✨</p>
         
-        <div class="mt-12 w-80 h-2 bg-gray-800 rounded-full overflow-hidden">
-            <div class="h-full progress-gradient animate-pulse" style="width: 100%;"></div>
+        <div class="mt-12 w-80 h-3 bg-gray-800 rounded-full overflow-hidden" style="background: linear-gradient(90deg, #e5e7eb 0%, #d1d5db 100%); box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+            <div class="h-full progress-gradient animate-pulse" style="width: 100%; background: linear-gradient(90deg, #10b981 0%, #3b82f6 50%, #10b981 100%); box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);"></div>
         </div>
-        <p class="text-sm text-gray-500 mt-3">Initializing EU Space Systems...</p>
+        <p class="text-sm text-gray-500 mt-3" style="color: #6b7280; font-weight: 600; font-size: 0.95rem;">Initializing EU Space Systems...</p>
     </div>
 
     <!-- S2. Sign Up/Log In -->
@@ -1288,18 +1288,18 @@
 
             <!-- Sustainability Filter -->
             <div class="bg-gray-900 rounded-2xl p-6 mb-6">
-                <h3 class="text-xl font-semibold mb-4 flex items-center">
-                    <i class="fas fa-leaf mr-3 neon-green"></i>
+                <h3 class="text-xl font-semibold mb-4 flex items-center text-gray-900">
+                    <i class="fas fa-leaf mr-3 text-green-600"></i>
                     Sustainability Target
                 </h3>
                 <div class="relative">
-                    <input type="range" min="0" max="100" value="75" class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer">
-                    <div class="flex justify-between text-sm text-gray-400 mt-2">
-                        <span>Minimum Impact</span>
-                        <span class="neon-green font-semibold">Zero Trace (Highest Score)</span>
+                    <input type="range" min="0" max="100" value="75" class="w-full h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer">
+                    <div class="flex justify-between text-sm text-gray-700 mt-2">
+                        <span class="font-medium">Minimum Impact</span>
+                        <span class="text-green-600 font-semibold">Zero Trace (Highest Score)</span>
                     </div>
                 </div>
-                <p class="text-xs text-gray-500 mt-2">Powered by Copernicus LULC data</p>
+                <p class="text-xs text-gray-600 mt-2">Powered by Copernicus LULC data</p>
             </div>
 
             <!-- Safety Alerts Filter -->
@@ -1583,40 +1583,122 @@
 
             <!-- Route Options Map -->
             <div class="bg-gray-900 rounded-2xl p-6 mb-6">
-                <h3 class="text-xl font-semibold mb-4">Route Options</h3>
-                <div class="bg-gray-800 rounded-xl h-80 md:h-96 mb-4 relative overflow-hidden">
-                    <svg class="absolute inset-0 w-full h-full">
-                        <!-- The Green Path (Most Sustainable) -->
-                        <path d="M50,300 Q150,200 250,250 T450,220" class="route-line" stroke="#00FF00" stroke-width="6" fill="none"/>
-                        <!-- The Safe Route -->
-                        <path d="M50,300 Q200,150 350,200 T450,180" class="route-line" stroke="#FFD700" stroke-width="6" fill="none"/>
-                        <!-- The Fastest Route -->
-                        <path d="M50,300 Q250,100 400,150 T450,140" class="route-line" stroke="#007FFF" stroke-width="6" fill="none"/>
-                        <!-- The Balanced Route -->
-                        <path d="M50,300 Q100,350 200,320 T450,280" class="route-line" stroke="#FFA500" stroke-width="6" fill="none"/>
+                <h3 class="text-xl font-semibold mb-4 text-gray-900">Route Options</h3>
+                <div class="rounded-xl h-80 md:h-96 mb-4 relative overflow-hidden" style="background: linear-gradient(to bottom, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);">
+                    
+                    <!-- Detailed Map Background SVG -->
+                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+                        <!-- Base terrain -->
+                        <rect width="500" height="400" fill="#f5f5f5"/>
                         
-                        <circle cx="50" cy="300" r="10" fill="#00FF00"/>
-                        <circle cx="450" cy="200" r="10" fill="#FF0000"/>
+                        <!-- Forest/Park areas -->
+                        <ellipse cx="120" cy="280" rx="90" ry="70" fill="#c8e6c9" opacity="0.7"/>
+                        <ellipse cx="380" cy="200" rx="100" ry="80" fill="#a5d6a7" opacity="0.7"/>
+                        <ellipse cx="300" cy="320" rx="70" ry="50" fill="#c8e6c9" opacity="0.6"/>
+                        
+                        <!-- Mountains -->
+                        <path d="M150,120 L180,60 L210,120 Z" fill="#bdbdbd" opacity="0.8"/>
+                        <path d="M320,80 L360,20 L400,80 Z" fill="#9e9e9e" opacity="0.8"/>
+                        
+                        <!-- Roads -->
+                        <path d="M0,200 Q150,190 300,200 Q450,210 500,200" stroke="#ffffff" stroke-width="8" fill="none" opacity="0.8"/>
+                        <path d="M0,200 Q150,190 300,200 Q450,210 500,200" stroke="#e0e0e0" stroke-width="6" fill="none"/>
+                        
+                        <!-- Topographic contour lines -->
+                        <g stroke="#4a6b2f" stroke-width="0.5" fill="none" opacity="0.3">
+                            <path d="M0,300 Q100,290 200,300 Q300,310 500,300"/>
+                            <path d="M0,260 Q120,250 240,260 Q360,270 500,260"/>
+                            <path d="M50,220 Q150,210 250,220 Q350,230 500,220"/>
+                            <path d="M100,180 Q200,170 300,180 Q400,190 500,180"/>
+                            <ellipse cx="180" cy="80" rx="50" ry="30" opacity="0.5"/>
+                            <ellipse cx="360" cy="50" rx="40" ry="25" opacity="0.5"/>
+                        </g>
+                        
+                        <!-- Water features -->
+                        <path d="M0,250 Q100,240 200,250 Q300,260 400,250" stroke="#64b5f6" stroke-width="4" fill="none" opacity="0.6"/>
+                        
+                        <!-- Trails (dashed) -->
+                        <path d="M80,320 Q180,300 280,310" stroke="#8d6e63" stroke-width="2" stroke-dasharray="6,3" fill="none" opacity="0.5"/>
+                        
+                        <!-- Buildings/POIs -->
+                        <rect x="40" y="290" width="12" height="15" fill="#616161" opacity="0.4"/>
+                        <rect x="440" y="190" width="12" height="15" fill="#616161" opacity="0.4"/>
+                        
+                        <!-- Grid overlay (subtle) -->
+                        <g stroke="#757575" stroke-width="0.3" opacity="0.1">
+                            <line x1="0" y1="0" x2="0" y2="400"/>
+                            <line x1="100" y1="0" x2="100" y2="400"/>
+                            <line x1="200" y1="0" x2="200" y2="400"/>
+                            <line x1="300" y1="0" x2="300" y2="400"/>
+                            <line x1="400" y1="0" x2="400" y2="400"/>
+                            <line x1="0" y1="0" x2="500" y2="0"/>
+                            <line x1="0" y1="100" x2="500" y2="100"/>
+                            <line x1="0" y1="200" x2="500" y2="200"/>
+                            <line x1="0" y1="300" x2="500" y2="300"/>
+                        </g>
                     </svg>
                     
-                    <!-- Route Legend -->
-                    <div class="absolute top-4 right-4 bg-black/90 rounded-lg p-4 text-sm">
-                        <div class="space-y-2">
-                            <div class="flex items-center">
-                                <div class="w-4 h-1 bg-green-400 mr-2"></div>
-                                <span>Green Path (Most Sustainable)</span>
+                    <!-- Route Lines Layer (on top of map) -->
+                    <svg class="absolute inset-0 w-full h-full">
+                        <!-- The Green Path (Most Sustainable) -->
+                        <path d="M50,300 Q150,200 250,250 T450,220" class="route-line" stroke="#00FF00" stroke-width="6" fill="none" style="filter: drop-shadow(0 0 4px #00FF00);"/>
+                        <!-- The Safe Route -->
+                        <path d="M50,300 Q200,150 350,200 T450,180" class="route-line" stroke="#FFD700" stroke-width="6" fill="none" style="filter: drop-shadow(0 0 4px #FFD700);"/>
+                        <!-- The Fastest Route -->
+                        <path d="M50,300 Q250,100 400,150 T450,140" class="route-line" stroke="#007FFF" stroke-width="6" fill="none" style="filter: drop-shadow(0 0 4px #007FFF);"/>
+                        <!-- The Balanced Route -->
+                        <path d="M50,300 Q100,350 200,320 T450,280" class="route-line" stroke="#FFA500" stroke-width="6" fill="none" style="filter: drop-shadow(0 0 4px #FFA500);"/>
+                        
+                        <!-- Start and End markers -->
+                        <circle cx="50" cy="300" r="10" fill="#00FF00" stroke="#ffffff" stroke-width="2"/>
+                        <circle cx="450" cy="200" r="10" fill="#FF0000" stroke="#ffffff" stroke-width="2"/>
+                    </svg>
+                    
+                    <!-- Route Legend with Map Background -->
+                    <div class="absolute top-4 right-4 rounded-lg p-4 text-sm shadow-xl overflow-hidden" style="background: linear-gradient(135deg, rgba(245,250,240,0.98) 0%, rgba(230,245,255,0.98) 100%);">
+                        <!-- Map Grid Pattern (More Visible) -->
+                        <div class="absolute inset-0 opacity-30" style="background-image: repeating-linear-gradient(0deg, #10b981 0px, transparent 1px, transparent 12px), repeating-linear-gradient(90deg, #10b981 0px, transparent 1px, transparent 12px); background-size: 12px 12px;"></div>
+                        
+                        <!-- Topographic Contour Lines (More Visible) -->
+                        <svg class="absolute inset-0 w-full h-full opacity-25" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <!-- Hills/Mountains -->
+                            <ellipse cx="50" cy="30" rx="30" ry="20" fill="none" stroke="#059669" stroke-width="1"/>
+                            <ellipse cx="50" cy="30" rx="20" ry="13" fill="none" stroke="#059669" stroke-width="1"/>
+                            <ellipse cx="50" cy="30" rx="10" ry="7" fill="none" stroke="#059669" stroke-width="1"/>
+                            
+                            <!-- River/Stream -->
+                            <path d="M10,70 Q30,65 50,70 T90,70" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+                            
+                            <!-- Additional terrain features -->
+                            <ellipse cx="80" cy="80" rx="15" ry="10" fill="none" stroke="#10b981" stroke-width="0.8" opacity="0.5"/>
+                            <path d="M5,40 Q25,38 45,40" fill="none" stroke="#10b981" stroke-width="0.8" opacity="0.5"/>
+                        </svg>
+                        
+                        <!-- Legend Title -->
+                        <div class="relative z-10 mb-3 pb-2 border-b-2 border-gray-300">
+                            <div class="flex items-center text-gray-800 font-bold">
+                                <i class="fas fa-map text-green-600 mr-2"></i>
+                                Route Options
                             </div>
-                            <div class="flex items-center">
-                                <div class="w-4 h-1 bg-yellow-400 mr-2"></div>
-                                <span>Safe Route (Most Secure)</span>
+                        </div>
+                        
+                        <!-- Legend Items -->
+                        <div class="relative z-10 space-y-2.5">
+                            <div class="flex items-center text-gray-700 hover:bg-green-50 p-1.5 rounded transition-colors">
+                                <div class="w-6 h-1.5 bg-green-500 mr-3 rounded-full shadow-sm"></div>
+                                <span class="font-medium text-sm">Green Path (Most Sustainable)</span>
                             </div>
-                            <div class="flex items-center">
-                                <div class="w-4 h-1 bg-blue-400 mr-2"></div>
-                                <span>Fastest Route</span>
+                            <div class="flex items-center text-gray-700 hover:bg-yellow-50 p-1.5 rounded transition-colors">
+                                <div class="w-6 h-1.5 bg-yellow-500 mr-3 rounded-full shadow-sm"></div>
+                                <span class="font-medium text-sm">Safe Route (Most Secure)</span>
                             </div>
-                            <div class="flex items-center">
-                                <div class="w-4 h-1 bg-orange-400 mr-2"></div>
-                                <span>Balanced Route</span>
+                            <div class="flex items-center text-gray-700 hover:bg-blue-50 p-1.5 rounded transition-colors">
+                                <div class="w-6 h-1.5 bg-blue-500 mr-3 rounded-full shadow-sm"></div>
+                                <span class="font-medium text-sm">Fastest Route</span>
+                            </div>
+                            <div class="flex items-center text-gray-700 hover:bg-orange-50 p-1.5 rounded transition-colors">
+                                <div class="w-6 h-1.5 bg-orange-500 mr-3 rounded-full shadow-sm"></div>
+                                <span class="font-medium text-sm">Balanced Route</span>
                             </div>
                         </div>
                     </div>
@@ -1771,40 +1853,40 @@
                  x-transition:enter="transition ease-out duration-300"
                  x-transition:enter-start="opacity-0 translate-y-4"
                  x-transition:enter-end="opacity-100 translate-y-0"
-                 class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 mb-6 border-2"
+                 class="bg-white rounded-2xl p-6 mb-6 border-2 shadow-lg"
                  :class="{
-                     'border-green-400': routeConsequences?.color === 'green',
-                     'border-yellow-400': routeConsequences?.color === 'yellow',
-                     'border-blue-400': routeConsequences?.color === 'blue',
-                     'border-orange-400': routeConsequences?.color === 'orange'
+                     'border-green-500': routeConsequences?.color === 'green',
+                     'border-yellow-500': routeConsequences?.color === 'yellow',
+                     'border-blue-500': routeConsequences?.color === 'blue',
+                     'border-orange-500': routeConsequences?.color === 'orange'
                  }">
                 <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold flex items-center">
+                    <h3 class="text-xl font-bold flex items-center text-gray-900">
                         <i class="fas fa-info-circle mr-3"
                            :class="{
-                               'text-green-400': routeConsequences?.color === 'green',
-                               'text-yellow-400': routeConsequences?.color === 'yellow',
-                               'text-blue-400': routeConsequences?.color === 'blue',
-                               'text-orange-400': routeConsequences?.color === 'orange'
+                               'text-green-600': routeConsequences?.color === 'green',
+                               'text-yellow-600': routeConsequences?.color === 'yellow',
+                               'text-blue-600': routeConsequences?.color === 'blue',
+                               'text-orange-600': routeConsequences?.color === 'orange'
                            }"></i>
                         <span x-text="'Route Analysis: ' + routeConsequences?.name"></span>
                     </h3>
-                    <button @click="showRouteConsequences = false" class="text-gray-400 hover:text-white">
+                    <button @click="showRouteConsequences = false" class="text-gray-500 hover:text-gray-900">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Pros -->
-                    <div class="bg-green-900/20 rounded-xl p-4 border border-green-400/30">
-                        <h4 class="font-semibold text-green-400 mb-3 flex items-center">
+                    <div class="bg-green-50 rounded-xl p-4 border-2 border-green-500">
+                        <h4 class="font-semibold text-green-700 mb-3 flex items-center">
                             <i class="fas fa-check-circle mr-2"></i>
                             Benefits & Advantages
                         </h4>
-                        <ul class="space-y-2 text-sm">
+                        <ul class="space-y-2 text-sm text-gray-800">
                             <template x-for="pro in routeConsequences?.pros" :key="pro">
                                 <li class="flex items-start">
-                                    <i class="fas fa-plus text-green-400 mr-2 mt-1 text-xs"></i>
+                                    <i class="fas fa-plus text-green-600 mr-2 mt-1 text-xs"></i>
                                     <span x-text="pro"></span>
                                 </li>
                             </template>
@@ -1812,15 +1894,15 @@
                     </div>
 
                     <!-- Cons -->
-                    <div class="bg-red-900/20 rounded-xl p-4 border border-red-400/30">
-                        <h4 class="font-semibold text-red-400 mb-3 flex items-center">
+                    <div class="bg-red-50 rounded-xl p-4 border-2 border-red-500">
+                        <h4 class="font-semibold text-red-700 mb-3 flex items-center">
                             <i class="fas fa-exclamation-triangle mr-2"></i>
                             Challenges & Trade-offs
                         </h4>
-                        <ul class="space-y-2 text-sm">
+                        <ul class="space-y-2 text-sm text-gray-800">
                             <template x-for="con in routeConsequences?.cons" :key="con">
                                 <li class="flex items-start">
-                                    <i class="fas fa-minus text-red-400 mr-2 mt-1 text-xs"></i>
+                                    <i class="fas fa-minus text-red-600 mr-2 mt-1 text-xs"></i>
                                     <span x-text="con"></span>
                                 </li>
                             </template>
@@ -1829,32 +1911,32 @@
                 </div>
 
                 <!-- Risk Assessment -->
-                <div class="mt-4 bg-blue-900/20 rounded-xl p-4 border border-blue-400/30">
-                    <h4 class="font-semibold text-blue-400 mb-2 flex items-center">
+                <div class="mt-4 bg-blue-50 rounded-xl p-4 border-2 border-blue-500">
+                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
                         <i class="fas fa-shield-alt mr-2"></i>
                         Risk Assessment
                     </h4>
-                    <p class="text-sm" x-text="routeConsequences?.risks"></p>
+                    <p class="text-sm text-gray-800" x-text="routeConsequences?.risks"></p>
                 </div>
 
                 <!-- Active Alerts -->
                 <div x-show="routeConsequences?.alerts && routeConsequences.alerts.length > 0" 
-                     class="mt-4 bg-orange-900/20 rounded-xl p-4 border border-orange-400/30">
-                    <h4 class="font-semibold text-orange-400 mb-2 flex items-center">
+                     class="mt-4 bg-orange-50 rounded-xl p-4 border-2 border-orange-500">
+                    <h4 class="font-semibold text-orange-700 mb-2 flex items-center">
                         <i class="fas fa-bell mr-2"></i>
                         Active Alerts
                     </h4>
-                    <ul class="space-y-1 text-sm">
+                    <ul class="space-y-1 text-sm text-gray-800">
                         <template x-for="alert in routeConsequences?.alerts" :key="alert">
-                            <li x-text="alert" class="text-orange-300"></li>
+                            <li x-text="alert"></li>
                         </template>
                     </ul>
                 </div>
 
                 <!-- Comparison prompt -->
-                <div class="mt-4 bg-gray-800/50 rounded-xl p-4 border border-gray-600">
-                    <p class="text-sm text-gray-300">
-                        <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                <div class="mt-4 bg-gray-100 rounded-xl p-4 border-2 border-gray-300">
+                    <p class="text-sm text-gray-700">
+                        <i class="fas fa-lightbulb text-yellow-600 mr-2"></i>
                         Want to compare? Click another route card to see alternative consequences.
                     </p>
                 </div>
@@ -1936,13 +2018,22 @@
     <div x-show="currentScreen === 'navigation'" class="min-h-screen bg-white relative">
         <!-- Google Maps-Style Navigation Map -->
         <div class="h-screen bg-gray-100 relative overflow-hidden">
-            <!-- Map Background -->
+            <!-- Realistic Map Background -->
             <svg class="absolute inset-0 w-full h-full" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice">
                 <defs>
-                    <!-- Google Maps gradients -->
+                    <!-- Realistic gradients -->
+                    <linearGradient id="navForestGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#b8d4b8;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#8ab98a;stop-opacity:1"/>
+                    </linearGradient>
                     <linearGradient id="navParkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color:#c8e6c9;stop-opacity:1"/>
-                        <stop offset="100%" style="stop-color:#81c784;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#a5d6a7;stop-opacity:1"/>
+                    </linearGradient>
+                    <linearGradient id="navMountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" style="stop-color:#d6d6d6;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#b8b8b8;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#9e9e9e;stop-opacity:1"/>
                     </linearGradient>
                     <filter id="navShadow">
                         <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
@@ -1955,72 +2046,148 @@
                             <feMergeNode in="SourceGraphic"/>
                         </feMerge>
                     </filter>
+                    <!-- Tree pattern -->
+                    <pattern id="treePattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="5" cy="5" r="2" fill="#2d5016" opacity="0.3"/>
+                        <circle cx="15" cy="12" r="2" fill="#3a6b1e" opacity="0.3"/>
+                        <circle cx="10" cy="17" r="2" fill="#2d5016" opacity="0.3"/>
+                    </pattern>
                 </defs>
                 
-                <!-- Base terrain -->
-                <rect width="600" height="800" fill="#f5f5f5"/>
+                <!-- Base terrain with texture -->
+                <rect width="600" height="800" fill="#f8f4ed"/>
                 
-                <!-- Parks and green spaces -->
-                <ellipse cx="150" cy="600" rx="100" ry="80" fill="url(#navParkGradient)" opacity="0.8"/>
-                <ellipse cx="450" cy="500" rx="120" ry="90" fill="url(#navParkGradient)" opacity="0.8"/>
-                
-                <!-- Buildings/urban areas -->
-                <g fill="#e0e0e0" stroke="#bdbdbd" stroke-width="1">
-                    <rect x="50" y="250" width="40" height="50" rx="2"/>
-                    <rect x="100" y="230" width="35" height="70" rx="2"/>
-                    <rect x="145" y="240" width="45" height="60" rx="2"/>
-                    <rect x="400" y="300" width="50" height="60" rx="2"/>
-                    <rect x="460" y="320" width="40" height="50" rx="2"/>
+                <!-- Large forest areas with realistic shapes -->
+                <g opacity="0.9">
+                    <ellipse cx="120" cy="650" rx="110" ry="95" fill="url(#navForestGradient)" filter="url(#navShadow)"/>
+                    <ellipse cx="180" cy="620" rx="80" ry="70" fill="url(#navForestGradient)" opacity="0.7"/>
+                    <ellipse cx="480" cy="520" rx="130" ry="100" fill="url(#navParkGradient)" filter="url(#navShadow)"/>
+                    <ellipse cx="420" cy="480" rx="90" ry="75" fill="url(#navForestGradient)" opacity="0.6"/>
+                    <ellipse cx="90" cy="380" rx="70" ry="60" fill="#b8d4b8" opacity="0.6"/>
                 </g>
                 
-                <!-- Roads (Google Maps style) -->
+                <!-- Tree texture overlay on forests -->
+                <ellipse cx="120" cy="650" rx="110" ry="95" fill="url(#treePattern)" opacity="0.4"/>
+                <ellipse cx="480" cy="520" rx="130" ry="100" fill="url(#treePattern)" opacity="0.3"/>
+                
+                <!-- Mountains/Hills with shading -->
+                <g opacity="0.85">
+                    <path d="M180,200 L220,120 L260,200 Z" fill="url(#navMountainGradient)" filter="url(#navShadow)"/>
+                    <path d="M380,160 L430,70 L480,160 Z" fill="url(#navMountainGradient)" filter="url(#navShadow)"/>
+                    <path d="M320,180 L350,130 L380,180 Z" fill="#c0c0c0" opacity="0.7"/>
+                </g>
+                
+                <!-- Detailed urban areas with shadows -->
+                <g opacity="0.8" filter="url(#navShadow)">
+                    <!-- Small town cluster -->
+                    <rect x="50" y="260" width="38" height="48" rx="2" fill="#d9d9d9" stroke="#999" stroke-width="1"/>
+                    <rect x="95" y="240" width="32" height="65" rx="2" fill="#e6e6e6" stroke="#999" stroke-width="1"/>
+                    <rect x="135" y="250" width="42" height="58" rx="2" fill="#d9d9d9" stroke="#999" stroke-width="1"/>
+                    <rect x="185" y="265" width="35" height="45" rx="2" fill="#e0e0e0" stroke="#999" stroke-width="1"/>
+                    
+                    <!-- Destination area buildings -->
+                    <rect x="400" y="310" width="48" height="58" rx="2" fill="#d9d9d9" stroke="#999" stroke-width="1"/>
+                    <rect x="455" y="330" width="38" height="48" rx="2" fill="#e6e6e6" stroke="#999" stroke-width="1"/>
+                    <rect x="500" y="320" width="40" height="52" rx="2" fill="#e0e0e0" stroke="#999" stroke-width="1"/>
+                </g>
+                
+                <!-- Road network with realistic styling -->
                 <g>
-                    <!-- Main highway -->
-                    <path d="M0,400 Q150,390 300,400 Q450,410 600,400" 
-                          stroke="#ffffff" stroke-width="20" fill="none" filter="url(#navShadow)"/>
-                    <path d="M0,400 Q150,390 300,400 Q450,410 600,400" 
-                          stroke="#ffa726" stroke-width="16" fill="none"/>
-                    <path d="M0,400 Q150,390 300,400 Q450,410 600,400" 
-                          stroke="#ffffff" stroke-width="2" stroke-dasharray="20,15" fill="none"/>
+                    <!-- Main highway with median -->
+                    <path d="M0,410 Q180,395 350,410 Q500,425 600,410" 
+                          stroke="#ffffff" stroke-width="24" fill="none" filter="url(#navShadow)"/>
+                    <path d="M0,410 Q180,395 350,410 Q500,425 600,410" 
+                          stroke="#ffa726" stroke-width="20" fill="none"/>
+                    <path d="M0,410 Q180,395 350,410 Q500,425 600,410" 
+                          stroke="#ffd54f" stroke-width="18" fill="none" opacity="0.5"/>
+                    <path d="M0,410 Q180,395 350,410 Q500,425 600,410" 
+                          stroke="#ffffff" stroke-width="2" stroke-dasharray="18,12" fill="none"/>
                     
-                    <!-- Secondary roads -->
-                    <path d="M300,200 L300,800" stroke="#ffffff" stroke-width="14" fill="none"/>
-                    <path d="M300,200 L300,800" stroke="#e0e0e0" stroke-width="12" fill="none"/>
+                    <!-- Secondary road - vertical -->
+                    <path d="M310,150 L305,800" stroke="#ffffff" stroke-width="16" fill="none" filter="url(#navShadow)"/>
+                    <path d="M310,150 L305,800" stroke="#e8e8e8" stroke-width="14" fill="none"/>
+                    <path d="M310,150 L305,800" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="12,8" fill="none" opacity="0.8"/>
                     
-                    <path d="M100,100 Q200,300 250,500" stroke="#ffffff" stroke-width="12" fill="none"/>
-                    <path d="M100,100 Q200,300 250,500" stroke="#e0e0e0" stroke-width="10" fill="none"/>
+                    <!-- Curved country road -->
+                    <path d="M100,120 Q180,280 240,480 Q260,560 270,640" 
+                          stroke="#ffffff" stroke-width="14" fill="none" filter="url(#navShadow)"/>
+                    <path d="M100,120 Q180,280 240,480 Q260,560 270,640" 
+                          stroke="#e8e8e8" stroke-width="12" fill="none"/>
+                    
+                    <!-- Trail connector -->
+                    <path d="M240,520 Q255,505 270,490" stroke="#e8e8e8" stroke-width="10" fill="none"/>
                 </g>
                 
-                <!-- Active route path (Google Maps blue) -->
+                <!-- Hiking trails (dashed brown) -->
+                <g stroke="#8d6e63" stroke-width="3" stroke-dasharray="8,4" fill="none" opacity="0.7">
+                    <path d="M150,680 Q200,650 250,630"/>
+                    <path d="M480,560 Q450,540 420,510"/>
+                </g>
+                
+                <!-- Water features - streams and ponds -->
+                <g>
+                    <path d="M10,300 Q100,290 190,300 Q280,310 370,300" 
+                          stroke="#64b5f6" stroke-width="6" fill="none" opacity="0.7" filter="url(#navShadow)"/>
+                    <ellipse cx="520" cy="600" rx="40" ry="30" fill="#81d4fa" opacity="0.6" filter="url(#navShadow)"/>
+                </g>
+                
+                <!-- Topographic contour lines for realism -->
+                <g stroke="#7d9b7d" stroke-width="0.5" fill="none" opacity="0.25">
+                    <path d="M0,600 Q150,590 300,600 Q450,610 600,600"/>
+                    <path d="M0,550 Q150,540 300,550 Q450,560 600,550"/>
+                    <path d="M50,500 Q200,490 350,500 Q500,510 600,500"/>
+                    <path d="M100,450 Q250,440 400,450 Q550,460 600,450"/>
+                    <ellipse cx="220" cy="150" rx="60" ry="40" opacity="0.5"/>
+                    <ellipse cx="430" cy="100" rx="50" ry="35" opacity="0.5"/>
+                </g>
+                
+                <!-- Active route path (Google Maps blue with glow) -->
                 <path d="M250,520 Q280,480 310,450 Q340,420 370,400 Q400,380 430,370" 
                       class="route-line" 
                       stroke="#1976d2" 
-                      stroke-width="10" 
+                      stroke-width="12" 
                       fill="none"
-                      filter="url(#navShadow)"/>
+                      filter="url(#navShadow)"
+                      style="filter: drop-shadow(0 0 8px #1976d2);"/>
                 
                 <!-- Current position indicator (pulsing blue dot) -->
                 <g>
-                    <circle cx="250" cy="520" r="30" fill="#1976d2" opacity="0.2" class="animate-pulse"/>
-                    <circle cx="250" cy="520" r="18" fill="#ffffff" stroke="#1976d2" stroke-width="4">
-                        <animate attributeName="r" values="18;22;18" dur="2s" repeatCount="indefinite"/>
+                    <circle cx="250" cy="520" r="35" fill="#1976d2" opacity="0.15" class="animate-pulse"/>
+                    <circle cx="250" cy="520" r="22" fill="#ffffff" stroke="#1976d2" stroke-width="5">
+                        <animate attributeName="r" values="22;26;22" dur="2s" repeatCount="indefinite"/>
                     </circle>
-                    <circle cx="250" cy="520" r="10" fill="#1976d2"/>
+                    <circle cx="250" cy="520" r="12" fill="#1976d2"/>
                     <!-- Direction arrow -->
-                    <path d="M250,510 L255,518 L245,518 Z" fill="#ffffff"/>
+                    <path d="M250,508 L257,520 L243,520 Z" fill="#ffffff"/>
                 </g>
                 
-                <!-- Waypoint markers -->
+                <!-- Waypoint markers with labels -->
                 <g>
-                    <circle cx="310" cy="450" r="12" fill="#ff6f00" stroke="#ffffff" stroke-width="3"/>
-                    <circle cx="370" cy="400" r="12" fill="#ff6f00" stroke="#ffffff" stroke-width="3"/>
-                    <circle cx="430" cy="370" r="16" fill="#d32f2f" stroke="#ffffff" stroke-width="4"/>
-                    <text x="430" y="375" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="bold">B</text>
+                    <circle cx="310" cy="450" r="14" fill="#ff6f00" stroke="#ffffff" stroke-width="3" filter="url(#navShadow)"/>
+                    <text x="310" y="440" text-anchor="middle" fill="#424242" font-size="9" font-weight="600">Checkpoint 1</text>
+                    
+                    <circle cx="370" cy="400" r="14" fill="#ff6f00" stroke="#ffffff" stroke-width="3" filter="url(#navShadow)"/>
+                    <text x="370" y="390" text-anchor="middle" fill="#424242" font-size="9" font-weight="600">Checkpoint 2</text>
+                    
+                    <circle cx="430" cy="370" r="18" fill="#d32f2f" stroke="#ffffff" stroke-width="4" filter="url(#navShadow)"/>
+                    <text x="430" y="376" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">🏁</text>
+                    <text x="430" y="360" text-anchor="middle" fill="#424242" font-size="10" font-weight="700">Destination</text>
                 </g>
                 
-                <!-- Map labels -->
-                <text x="150" y="630" text-anchor="middle" fill="#2d5016" font-size="12" font-weight="600">Forest Park</text>
-                <text x="450" y="530" text-anchor="middle" fill="#2d5016" font-size="12" font-weight="600">Nature Trail</text>
+                <!-- Detailed map labels -->
+                <g font-family="Arial, sans-serif" font-weight="600">
+                    <text x="120" y="680" text-anchor="middle" fill="#1b5e20" font-size="13">🌲 Alpine Forest</text>
+                    <text x="480" y="555" text-anchor="middle" fill="#2d5016" font-size="12">🏞️ Valley Park</text>
+                    <text x="220" y="145" text-anchor="middle" fill="#424242" font-size="11">Eagle Peak</text>
+                    <text x="150" y="305" text-anchor="middle" fill="#0277bd" font-size="9">Crystal Creek</text>
+                </g>
+                
+                <!-- POI markers -->
+                <g>
+                    <!-- Parking -->
+                    <rect x="235" y="510" width="18" height="18" rx="2" fill="#1976d2" opacity="0.9" filter="url(#navShadow)"/>
+                    <text x="244" y="522" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">P</text>
+                </g>
             </svg>
 
             <!-- Google Maps-Style Top Bar -->
